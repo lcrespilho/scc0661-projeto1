@@ -4,7 +4,7 @@
 // *** References ***
 // http://soundfile.sapp.org/doc/WaveFormat/
 // http://stackoverflow.com/questions/13660777/c-reading-the-data-part-of-a-wav-file
-a
+
 typedef struct  WAV_HEADER{
     char                RIFF[4];        // RIFF Header Magic header | ChunkID
     unsigned int        ChunkSize;      // RIFF Chunk Size          | ChunkSize
@@ -17,8 +17,8 @@ typedef struct  WAV_HEADER{
     unsigned int        bytesPerSec;    // bytes per second         |
     unsigned short      blockAlign;     // 2=16-bit mono, 4=16-bit stereo
     unsigned short      bitsPerSample;  // Number of bits per sample
-    char                Subchunk2ID[4]; // "data"  string 
-    unsigned int        Subchunk2Size;  // Sampled data length  
+    char                Subchunk2ID[4]; // "data"  string
+    unsigned int        Subchunk2Size;  // Sampled data length
 } wav_hdr;
 
 // find the file size
